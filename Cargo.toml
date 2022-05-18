@@ -1,8 +1,8 @@
 [package]
-name = "libschema"
+name = "libschedule24"
 version = "0.1.0"
 authors = [ "NAHFE", "Not4x3l" ]
-description = "Rust library for skola24 schemas"
+description = "Rust library for skola24 schedules"
 edition = "2018"
 
 [dependencies]

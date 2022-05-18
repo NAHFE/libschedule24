@@ -146,7 +146,7 @@ pub async fn class_exists(domain: &str, school: &str, class: &str, should_cache:
 
 pub async fn cache_request(ckey: String, reqdata: serde_json::value::Value, api: &str, post: bool, should_cache: bool) -> Result<String, RequestError> {
     let cache = xdg::BaseDirectories::new()?
-                                    .create_cache_directory("schema")?
+                                    .create_cache_directory(env!("CARGO_PKG_NAME"))?
                                     .to_str().unwrap().to_owned();
     let data = if should_cache {
         match cacache::read(&cache, &ckey).await {
